@@ -30,6 +30,13 @@ app.add_middleware(
 def home():
     return {"message": "Dragon Fruit Ripeness API Running"}
 
+@app.get("/version")
+
+def version():
+    return {
+        "version": "cors-test-001"
+    }
+
 @app.post("/predict")
 async def predict_image(file: UploadFile = File(...)):
     try:
