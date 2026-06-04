@@ -19,7 +19,7 @@ model = load_model()
 
 
 app.add_middleware(
-    CORSiddleware,
+    CORSMiddleware,
     allow_origins=["https://dragon-fruit-ai-2.onrender.com"],
     allow_credentials=True,
     allow_methods=["*"],
