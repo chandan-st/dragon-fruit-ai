@@ -11,27 +11,19 @@ from app.utils import preprocess_image, predict
 from app.services.prediction_service import interpret_ripeness
 from app.services.intelligence_service import generate_intelligence
 
-app = FastAPI()
+
 from fastapi.middleware.cors import CORSMiddleware
+app = FastAPI()
 device = torch.device("cpu")
 model = load_model()
 
-from fastapi.middleware.cors import CORSMiddleware
-
-origins = [
-
-    "https://dragon-fruit-ai-2.onrender.com"
-
-]
 
 app.add_middleware(
-
-    CORSMiddleware,
-    allow_origins=origins,
+    CORSiddleware,
+    allow_origins=["https://dragon-fruit-ai-2.onrender.com"],
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
-
 )
 
 @app.get("/")
