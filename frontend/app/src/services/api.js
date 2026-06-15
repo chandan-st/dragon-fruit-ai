@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const fallbackBaseUrl = "https://dragon-fruit-ai.onrender.com";
+const fallbackBaseUrl = "https://dragon-fruit-ai-1.onrender.com";
 const devProxyBaseUrl = "/api";
 export const backendBaseUrl =
   import.meta.env.VITE_API_BASE_URL || (import.meta.env.DEV ? devProxyBaseUrl : fallbackBaseUrl);
